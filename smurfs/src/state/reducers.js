@@ -1,5 +1,5 @@
 import React from "react";
-import { stat } from "fs";
+
 //slices of state;
 const initialSmurf = {
     fetchData: false,
