@@ -7,7 +7,7 @@ export const SmurfList = (props) => {
     console.log("props from smurflist", props)
 
     return (
-        <div>Hello from Smurflist!
+        <div>
             {props.smurfs.smurfData.map((smurf) => <Smurf key={smurf.id} smurf={smurf}/>)}
         </div>
     )

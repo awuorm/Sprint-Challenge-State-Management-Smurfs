@@ -3,14 +3,15 @@ import {connect} from "react-redux";
 import * as actionCreators from "../state/actionCreators";
 import "./App.css";
 import SmurfList from "./SmurfList";
+import  SmurfForm  from "./SmurfForm";
 
 export const App = (props) => {
   console.log("props from app", props)
 
   return (
     <div className="App">
-        Howdy! Smurf ! 
         <SmurfList/>
+        <SmurfForm/>
       </div>
   )
 };
