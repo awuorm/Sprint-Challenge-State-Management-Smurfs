@@ -1,5 +1,59 @@
 .App {
   text-align: center;
+  background-image: url("../imgs/form_background.jpg");
+  object-fit: fill;
+  color: aliceblue;
+}
+
+.smurf > h1 {
+  font-size: 1em;
+}
+
+.smurf {
+  background-color:#2685C2;
+  width: 25vw;
+  margin-left: 37vw;
+  border-radius: 10em;
+}
+
+.smurf > img {
+  width: 8vw;
+  height: 10vh;
+}
+
+.smurf-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.smurf-form > form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  margin: 2em;
+  margin-left: 25vw;
+  background-color: #2685C2;
+  color: aliceblue;
+  
+}
+
+.smurf-form > form > input {
+  width: 80%;
+  margin: 0.8em;
+  padding: 0.8em;
+}
+
+.smurf-form > form > label {
+  margin: 0.5em;
+}
+
+.smurf-form > form > button {
+  margin: 0.8em;
+  padding: 0.8em;
+  border: none;
+
 }
 
 .App-logo {

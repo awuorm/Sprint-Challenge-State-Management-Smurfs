@@ -1,32 +1,24 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { connect } from "react-redux";
-import {inputSmurf, postSmurf} from "../state/actionCreators";
+import { inputSmurf, postSmurf } from "../state/actionCreators";
 
 export const SmurfForm = props => {
-
-const { inputSmurf, postSmurf, formSmurf} = props;    
-  
+  const { inputSmurf, formSmurf } = props;
 
   const changeValue = e => {
-    console.log("posting smurf ==>", e.target.name, e.target.value);
-  inputSmurf(e.target);
+    inputSmurf(e.target);
   };
 
   const addSmurf = e => {
     e.preventDefault();
-    //   alert( );
-    alert("submitting", formSmurf);
-   
   };
 
   const formSubmit = e => {
     e.preventDefault();
   };
 
-  console.log("props from smurfform", formSmurf);
-
   return (
-    <div>
+    <div className="smurf-form">
       Hello from smurf form
       <form onSubmit={formSubmit}>
         <label>Name</label>
@@ -58,5 +50,5 @@ const { inputSmurf, postSmurf, formSmurf} = props;
 
 export default connect(
   state => state,
-  {postSmurf,inputSmurf}
+  { postSmurf, inputSmurf }
 )(SmurfForm);

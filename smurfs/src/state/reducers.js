@@ -1,4 +1,3 @@
-import React from "react";
 import * as types from "./actionTypes";
 import uuid from "uuid";
 
@@ -23,24 +22,24 @@ export const smurfReducer = (state = initialSmurf, action) => {
   }
 };
 
-const initialFormState =  {
-    id: uuid(),
-    name: "",
-    age: "",
-    height: ""
-  };
+const initialFormState = {
+  id: uuid(),
+  name: "",
+  age: "",
+  height: ""
+};
 
-  export const  formReducer = (state = initialFormState, action) => {
-    switch (action.type) {
-      case types.INPUT_SMURF:
-        return {
-          ...state,
-          [action.payload.name]: action.payload.value,
-        };
-      default:
-        return state;
-    }
+export const formReducer = (state = initialFormState, action) => {
+  switch (action.type) {
+    case types.INPUT_SMURF:
+      return {
+        ...state,
+        [action.payload.name]: action.payload.value
+      };
+    default:
+      return state;
   }
+};
 
 //slices of state;
 const initialSmurfPosted = {
