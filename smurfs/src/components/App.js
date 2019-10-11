@@ -1,11 +1,16 @@
 import React, { useEffect } from "react";
 import {connect} from "react-redux";
-import * as actionCreators from "../state/actionCreators";
+import {smurfData,postSmurf} from "../state/actionCreators";
 import "./App.css";
 import SmurfList from "./SmurfList";
 import  SmurfForm  from "./SmurfForm";
 
 export const App = (props) => {
+
+  useEffect(() => {
+    props.smurfData();
+    props.postSmurf(props.formSmurf);
+  },[]);
   console.log("props from app", props)
 
   return (
@@ -16,4 +21,4 @@ export const App = (props) => {
   )
 };
 
-export default connect(state => state,actionCreators.smurfData )(App);
+export default connect(state => state,{smurfData,postSmurf} )(App);

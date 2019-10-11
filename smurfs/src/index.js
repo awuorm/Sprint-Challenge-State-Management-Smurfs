@@ -10,6 +10,8 @@ import * as reducers from "../src/state/reducers";
 
 const monsterReducer = combineReducers({
     smurfs: reducers.smurfReducer,
+    postSmurf: reducers.postSmurfReducer,
+    formSmurf: reducers.formReducer,
 });
 
 const store = createStore(

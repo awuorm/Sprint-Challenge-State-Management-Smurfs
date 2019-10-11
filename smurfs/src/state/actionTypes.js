@@ -4,3 +4,4 @@ export const GET_ERROR = "GET_ERROR";
 export const POST_DATA = "POST_DATA";
 export const POST_SMURF = "POST_SMURF";
 export const POST_ERROR = "POST_ERROR";
+export const INPUT_SMURF = "INPUT_SMURF";
