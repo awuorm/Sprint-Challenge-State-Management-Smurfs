@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import {NavLink} from "react-router-dom";
 import { connect } from "react-redux";
 import { smurfData, postSmurf } from "../state/actionCreators";
 import "./App.css";
@@ -6,14 +7,14 @@ import SmurfList from "./SmurfList";
 import SmurfForm from "./SmurfForm";
 
 export const App = props => {
+  const {formSmurf, smurfData, smurfs, postSmurf} = props;
   useEffect(() => {
-    props.smurfData();
-    props.postSmurf(props.formSmurf);
-  }, [props.smurfs.smurfData]);
+   smurfData();
+   postSmurf(formSmurf);
+  },[smurfs.smurfData]);
 
   return (
     <div className="App">
-      Welcome to the smurfVillage!
       <SmurfList />
       <SmurfForm />
     </div>

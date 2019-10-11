@@ -39,10 +39,10 @@ export const inputSmurf = target => {
   };
 };
 
-export const postSmurf = smurf => dispatch => {
+export const postSmurf = (smurf) => dispatch => {
   dispatch(postData());
   axios
-    .post("http://localhost:3333/smurfs", smurf)
+    .post("http://localhost:3333/smurfs",smurf)
     .then(res => {
       dispatch({
         type: types.POST_SMURF,

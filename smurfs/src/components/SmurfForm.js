@@ -19,8 +19,8 @@ export const SmurfForm = props => {
 
   return (
     <div className="smurf-form">
-      Hello from smurf form
       <form onSubmit={formSubmit}>
+        <h3>Add a new smurf</h3>
         <label>Name</label>
         <input
           value={formSmurf.name}

@@ -5,6 +5,30 @@
   color: aliceblue;
 }
 
+
+.Smurfs {
+  display: flex;
+  width: 450px;
+  height: 400px;
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  margin-left: 37vw;
+}
+
+.SmurfList {
+  display: flex;
+  flex-direction: column;
+}
+
+.SmurfList > h1 {
+  margin-top: 0;
+  padding: 1em;
+  box-shadow: 0 8px 6px -6px black;
+  border-bottom: 1px solid #2685C2;
+}
+
 .smurf > h1 {
   font-size: 1em;
 }
@@ -12,9 +36,29 @@
 .smurf {
   background-color:#2685C2;
   width: 25vw;
-  margin-left: 37vw;
+  height: 25vh;
+  margin: 1em;
+  padding:1em;
+   margin-left: 10vw; 
   border-radius: 10em;
+  /* width: 300px; */
+  flex-shrink: 0;
+  scroll-behavior: smooth;
 }
+
+.Smurfs::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.Smurfs::-webkit-scrollbar-thumb {
+  background: #2685C2;
+  border-radius: 10px;
+}
+.Smurfs::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+ 
 
 .smurf > img {
   width: 8vw;
@@ -47,6 +91,11 @@
 
 .smurf-form > form > label {
   margin: 0.5em;
+}
+
+.smurf-form > form > h3 {
+  margin: 0;
+  margin-top: 0.5em;
 }
 
 .smurf-form > form > button {
